@@ -71,7 +71,7 @@ func main() {
 	// ASCII ART file to slice of string by line
 	lttrlines := sliceFile(file)
 
-	if len(os.Args) == 1 || len(os.Args[1]) < 10 || os.Args[1][0:10] != "--reverse=" {
+	if len(os.Args) != 2  || len(os.Args[1]) < 10 || os.Args[1][0:10] != "--reverse=" {
 		fmt.Println("Usage: go run . [OPTION]")
 		fmt.Println("EX: go run . --reverse=<fileName>")
 	} else {
